@@ -52,6 +52,43 @@ IPv4::~IPv4()
     delete [] masque ;
 }
 
+IPv4::IPv4()
+{
+    adresse = new unsigned char [4];
+        masque  = new unsigned char [4];
+}
+
+IPv4::IPv4(const IPv4 &_ipv4)
+{
+    adresse = new unsigned char [4];
+        masque  = new unsigned char [4];
+        for(int indice = 0 ; indice < 4 ; indice++)
+        {
+            adresse[indice] = _ipv4.adresse[indice];
+            masque[indice]  = _ipv4.masque[indice];
+        }
+}
+
+IPv4 &IPv4::operator=(const IPv4 &_ipv4)
+{
+    if(adresse != _ipv4.adresse || masque != _ipv4.masque)
+        {
+           if(adresse != nullptr && masque != nullptr)
+           {
+               delete [] adresse;
+               delete [] masque ;
+           }
+           adresse = new unsigned char [4];
+           masque  = new unsigned char [4];
+           for(int indice = 0 ; indice < 4 ; indice++)
+           {
+               masque[indice]  = _ipv4.masque[indice];
+               adresse[indice] = _ipv4.adresse[indice];
+           }
+    }
+        return *this;
+}
+
 
 void IPv4::ObtenirMasque(unsigned char *_masque)
 {
@@ -76,38 +113,39 @@ void IPv4::ObtenirAdresseDiffusion(unsigned char *_diffusion)
 
 }
 
-void IPv4::ObtenirPremiereAdresse(unsigned char *_premiere)
-{
-        ObtenirAdresseReseau(_premiere);
-        _premiere[3] += 1;
-}
+//void IPv4::ObtenirPremiereAdresse(unsigned char *_premiere)
+//{
+//        ObtenirAdresseReseau(_premiere);
+//        _premiere[3] += 1;
+//}
 
-void IPv4::ObtenirDerniereAdresse(unsigned char *_derniere)
-{
-    ObtenirAdresseDiffusion(_derniere);
-    _derniere[3] -= 1;
+//void IPv4::ObtenirDerniereAdresse(unsigned char *_derniere)
+//{
+//    ObtenirAdresseDiffusion(_derniere);
+//    _derniere[3] -= 1;
 
 
-}
+//}
 
-int IPv4::NbBitA1(unsigned char val)
-{
-    int n = 0;
-    do {
-        n += val & 1;
-        val >>=1;
+//int IPv4::NbBitA1(unsigned char val)
+//{
+//    int n = 0;
+//    do {
+//        n += val & 1;
+//        val >>=1;
 
-    }while(val>0);
-    return n;
-}
+//    }while(val>0);
+//    return n;
+//}
 
-unsigned int IPv4::ObtenirNombreMachines()
-{
-    unsigned int nb = 0;
-    for (int i=0; i<4; i++)
-        nb += NbBitA1(masque[i]);
-    return exp2(32-nb) -2;
-}
+//unsigned int IPv4::ObtenirNombreMachines()
+//{
+//    unsigned int nb = 0;
+//    for (int i=0; i<4; i++)
+//        nb += NbBitA1(masque[i]);
+//    return exp2(32-nb) -2;
+//}
+
 
 
 
