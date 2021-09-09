@@ -27,4 +27,13 @@ public:
 
 };
 
+enum CHOIX_MENU
+{
+    OPTION_1 = 1,
+    OPTION_2,
+    OPTION_3,
+    OPTION_4,
+    QUITTER
+};
+
 #endif // MENU_H
