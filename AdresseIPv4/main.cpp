@@ -12,22 +12,37 @@ int main()
     unsigned char diffusion[4];
     unsigned char premiere[4];
     unsigned char derniere[4];
-    unsigned char nbMachine[4];
+
 
     IPv4 uneAdresse(adresse, 24); // instanciation de la classe IPv4
     cout << "Adresse IPv4 : ";
     AfficherTableau(adresse);
+
     uneAdresse.ObtenirMasque(masque); // appel d'une méthode
     cout << "Masque : ";
     AfficherTableau(masque);
+
     uneAdresse.ObtenirAdresseReseau(reseau);
     cout << "Réseau : ";
     AfficherTableau(reseau);
+
     uneAdresse.ObtenirAdresseDiffusion(diffusion);
     cout << "Diffusion : ";
-    uneAdresse.ObtenirDerniereAdresse(diffusion);
+    AfficherTableau(diffusion);
+
+    uneAdresse.ObtenirPremiereAdresse(premiere);
     cout << "Première Adresse : ";
     AfficherTableau(premiere);
+
+    uneAdresse.ObtenirDerniereAdresse(derniere);
+    cout << "Dernière Adresse : ";
+    AfficherTableau(derniere);
+
+
+    cout << "Nombre de machines : " << uneAdresse.ObtenirNombreMachines() << endl; // appel d'une méthode;
+
+
+
     return 0;
 }
 

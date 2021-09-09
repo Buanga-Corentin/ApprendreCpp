@@ -1,6 +1,8 @@
 #ifndef IPV4_H
 #define IPV4_H
 
+#include <math.h>
+
 
 class IPv4
 {
@@ -8,6 +10,7 @@ class IPv4
     unsigned char * adresse;
     unsigned char * masque ;
     void CalculerMasque(unsigned char _cidr);
+    int NbBitA1(unsigned char val);
   public:
     IPv4(const unsigned char * _adresse, const unsigned char _cidr);
     IPv4(const unsigned char * _adresse, const unsigned char * _masque);
@@ -15,9 +18,11 @@ class IPv4
     void ObtenirMasque(unsigned char * _masque);
     void ObtenirAdresseReseau(unsigned char * _reseau);
     void ObtenirAdresseDiffusion(unsigned char * _diffusion);
-    void ObtenirPremiereAdresse(unsigned char * _reseau);
-    void ObtenirDerniereAdresse(unsigned char * _diffusion);
-    void ObtenirNombreMachine(unsigned char * _masque);
+    void ObtenirPremiereAdresse(unsigned char * _premiere);
+    void ObtenirDerniereAdresse(unsigned char * _derniere);
+    unsigned int ObtenirNombreMachines();
+
+
 };
 
 #endif // IPV4_H
