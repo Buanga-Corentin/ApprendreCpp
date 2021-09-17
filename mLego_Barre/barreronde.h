@@ -5,8 +5,13 @@
 class BarreRonde: public Barre
 {
 public:
-    BarreRonde(string _reference, int _longueur, float _densite, string _nomAlliage);
+    BarreRonde(string _reference, float _longueur, float _densite, string _nomAlliage, float _diametre);
+    float CalculerSection();
+    float CalculerMasse();
     ~BarreRonde();
+    
+protected:
+    float diametre;
 };
 
 #endif // BARRERONDE_H

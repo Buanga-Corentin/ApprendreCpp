@@ -9,13 +9,13 @@ using namespace std;
 class Barre
 {
 public:
-    Barre(string _reference, int _longueur, float _densite, string _nomAlliage);
+    Barre(string _reference, float _longueur, float _densite, string _nomAlliage);
     void AfficherCaracteristiques();
     ~Barre();
-private:
+protected:
     string reference;
-    int longueur;
-    int densite;
+    float longueur;
+    float densite;
     string nomAlliage;
 };
 

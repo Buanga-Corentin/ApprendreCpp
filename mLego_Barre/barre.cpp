@@ -5,7 +5,7 @@ using namespace std ;
 
 
 
-Barre::Barre(string _reference, int _longueur, float _densite, string _nomAlliage):
+Barre::Barre(string _reference, float _longueur, float _densite, string _nomAlliage):
 
     reference(_reference),
     longueur(_longueur),
@@ -18,10 +18,14 @@ Barre::Barre(string _reference, int _longueur, float _densite, string _nomAlliag
 
 void Barre::AfficherCaracteristiques()
 {
+    cout << "=============================================" << endl;
+    cout << " " << endl;
     cout << "Reférence : " << reference << endl;
     cout << "Longueur : " << longueur << endl;
     cout << "Densité : " << densite << endl;
     cout << "Nom de L'alliage : " << nomAlliage << endl;
+    cout << " " << endl;
+    cout << "=============================================" << endl;
 }
 
 Barre::~Barre()

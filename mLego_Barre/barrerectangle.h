@@ -5,10 +5,14 @@
 class BarreRectangle: public Barre
 {
 public:
-    BarreRectangle(string _reference, int _longueur, float _densite, string _nomAlliage, int _largeur);
+    BarreRectangle(string _reference, float _longueur, float _densite, string _nomAlliage, float _largeur, float _hauteur);
+    float CalculerSection();
+    float CalculerMasse();
     ~BarreRectangle();
 private:
-    int largeur;
+    float largeur;
+    float hauteur;
+
 };
 
 #endif // BARRERECTANGLE_H
