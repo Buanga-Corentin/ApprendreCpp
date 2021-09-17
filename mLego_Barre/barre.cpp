@@ -24,8 +24,8 @@ void Barre::AfficherCaracteristiques()
     cout << "Longueur : " << longueur << endl;
     cout << "Densité : " << densite << endl;
     cout << "Nom de L'alliage : " << nomAlliage << endl;
-    cout << " " << endl;
-    cout << "=============================================" << endl;
+//    cout << " " << endl;
+//    cout << "=============================================" << endl;
 }
 
 Barre::~Barre()

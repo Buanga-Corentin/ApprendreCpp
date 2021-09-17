@@ -10,21 +10,27 @@ int main()
 {
 
     Barre Poutre("DR4FT",120,50,"laiton");
-    BarreCarree Minecraft("CR3PP3R",12,45,"acier",5);
-    BarreRonde Kazoo("K4Z00",12,45,"acier",14);
+    BarreCarree Cube("CR3PP3R",12,45,"acier",5);
+    BarreRonde Cylindre("K4Z00",12,45,"acier",14);
     BarreRectangle Kapla("K4PL4",35,17,"Bronze",6,8);
 
-    Minecraft.AfficherCaracteristiques();
-    Minecraft.CalculerSection();
-    Minecraft.CalculerMasse();
+    Cube.AfficherCaracteristiques();
+    Cube.CalculerSection();
+    cout << "Masse de la barre : " << Cube.CalculerMasse() << endl;
+    cout << " " << endl;
+    cout << "=============================================" << endl;
 
-    Kazoo.AfficherCaracteristiques();
-    Kazoo.CalculerSection();
-    Kazoo.CalculerMasse();
+    Cylindre.AfficherCaracteristiques();
+    Cylindre.CalculerSection();
+    cout << "Masse de la barre : " << Cylindre.CalculerMasse() << endl;
+    cout << " " << endl;
+    cout << "=============================================" << endl;
 
     Kapla.AfficherCaracteristiques();
     Kapla.CalculerSection();
-    Kapla.CalculerMasse();
+    cout << "Masse de la barre : " << Kapla.CalculerMasse() << endl;
+    cout << " " << endl;
+    cout << "=============================================" << endl;
 
     return 0;
 }

@@ -5,12 +5,13 @@
 class BarreCarree : public Barre
 {
 public:
-    BarreCarree(string _reference, float _longueur, float _densite, string _nomAlliage, float _longueurCote);
+    BarreCarree(string _reference, float _longueur, float _densite, string _nomAlliage, float _largeur);
+    void AfficherCaracteristiques();
     float CalculerSection();
     float CalculerMasse();
     ~BarreCarree();
 private:
-    float longueurCote;
+    float largeur;
 
 };
 

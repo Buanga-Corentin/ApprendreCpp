@@ -9,6 +9,17 @@ BarreRonde::BarreRonde(string _reference, float _longueur, float _densite, strin
     cout << "constructeur de la classe BarreRonde" << endl;
 }
 
+void BarreRonde::AfficherCaracteristiques()
+{
+    cout << "=============================================" << endl;
+    cout << " " << endl;
+    cout << "Reférence : " << reference << endl;
+    cout << "Longueur : " << longueur << endl;
+    cout << "Densité : " << densite << endl;
+    cout << "Nom de L'alliage : " << nomAlliage << endl;
+    cout << "diametre : " << diametre << endl;
+}
+
 float BarreRonde::CalculerSection()
 {
 

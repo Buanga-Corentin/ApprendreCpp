@@ -13,10 +13,22 @@ BarreRectangle::BarreRectangle(string _reference, float _longueur, float _densit
     cout << "constructeur de la classe BarreRectangle" << endl;
 }
 
+void BarreRectangle::AfficherCaracteristiques()
+{
+    cout << "=============================================" << endl;
+    cout << " " << endl;
+    cout << "Reférence : " << reference << endl;
+    cout << "Longueur : " << longueur << endl;
+    cout << "Densité : " << densite << endl;
+    cout << "Nom de L'alliage : " << nomAlliage << endl;
+    cout << "largeur : " << largeur << endl;
+    cout << "hauteur : " << hauteur << endl;
+}
+
 float BarreRectangle::CalculerSection()
 {
     float section =largeur * hauteur ;
-    cout << "Section de la Barre : " << section << endl;
+//    cout << "Section de la Barre : " << section << endl;
 
     return section;
 }

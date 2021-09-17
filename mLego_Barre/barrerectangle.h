@@ -6,6 +6,7 @@ class BarreRectangle: public Barre
 {
 public:
     BarreRectangle(string _reference, float _longueur, float _densite, string _nomAlliage, float _largeur, float _hauteur);
+    void AfficherCaracteristiques();
     float CalculerSection();
     float CalculerMasse();
     ~BarreRectangle();

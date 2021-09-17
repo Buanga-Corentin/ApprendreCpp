@@ -4,18 +4,29 @@
 using namespace std ;
 
 
-BarreCarree::BarreCarree(string _reference, float _longueur, float _densite, string _nomAlliage, float _longueurCote):
+BarreCarree::BarreCarree(string _reference, float _longueur, float _densite, string _nomAlliage, float _largeur):
     Barre(_reference, _longueur, _densite, _nomAlliage),
-    longueurCote(_longueurCote)
+    largeur(_largeur)
 {
     cout << "constructeur de la classe BarreCarree" << endl;
+}
+
+void BarreCarree::AfficherCaracteristiques()
+{
+    cout << "=============================================" << endl;
+    cout << " " << endl;
+    cout << "Reférence : " << reference << endl;
+    cout << "Longueur : " << longueur << endl;
+    cout << "Densité : " << densite << endl;
+    cout << "Nom de L'alliage : " << nomAlliage << endl;
+    cout << "largeur : " << largeur << endl;
 }
 
 float BarreCarree::CalculerSection()
 {
 
 
-    float section = longueurCote * longueurCote;
+    float section = largeur * largeur;
    // cout << "Section de la Barre : " << section << endl;
 
     return section;

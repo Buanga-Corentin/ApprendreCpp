@@ -6,6 +6,7 @@ class BarreRonde: public Barre
 {
 public:
     BarreRonde(string _reference, float _longueur, float _densite, string _nomAlliage, float _diametre);
+    void AfficherCaracteristiques();
     float CalculerSection();
     float CalculerMasse();
     ~BarreRonde();
